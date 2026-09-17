@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 public class Warehouse {
 
   // unique identifier
+  public Long id;
+
   public String businessUnitCode;
 
   public String location;
