@@ -1,0 +1,159 @@
+PS C:\Users\Admin\Downloads\FnCS_Casestudy2-20260116T095804Z-3-001 (1) 2 (3)\FnCS_Casestudy2\fcs-interview-code-assignment-main\java-assignment> mvn "-Dtest=ProductEndpointTest" "-Dquarkus.datasource.devservices.enabled=false" "-Dquarkus.datasource.db-kind=postgresql" "-Dquarkus.datasource.username=quarkus_test" "-Dquarkus.datasource.password=quarkus_test" "-Dquarkus.datasource.jdbc.url=jdbc:postgresql://localhost:15432/quarkus_test?options=-c%20TimeZone=Asia/Kolkata" test                                                               
+Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Kolkata
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.inventorix:java-code-assignment >-----------------
+[INFO] Building java-code-assignment 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ java-code-assignment ---
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- quarkus:3.13.3:generate-code (default) @ java-code-assignment ---
+[INFO] Generating JAX-RS interfaces and beans from: C:\Users\Admin\AppData\Local\Temp\warehouse-openapi.yaml1929075213520604793.json
+[INFO] Generating code...
+Generating Bean: com.warehouse.api.beans.Warehouse
+Adding to zip: com/warehouse/api/beans/Warehouse.java
+Generating Interface: com.warehouse.api.WarehouseResource
+Adding to zip: com/warehouse/api/WarehouseResource.java
+
+[INFO] Code generated, unpacking the output ZIP.
+[INFO] Code successfully generated.
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ java-code-assignment ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 22 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- quarkus:3.13.3:generate-code-tests (default) @ java-code-assignment ---
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ java-code-assignment ---
+[INFO] skip non existing resourceDirectory C:\Users\Admin\Downloads\FnCS_Casestudy2-20260116T095804Z-3-001 (1) 2 (3)\FnCS_Casestudy2\fcs-interview-code-assignment-main\java-assignment\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ java-code-assignment ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 6 source files with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ java-code-assignment ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Kolkata
+[INFO] Running com.fulfilment.application.monolith.products.ProductEndpointTest
+2026-09-17 18:29:20,147 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.openapi.generator.spec" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2026-09-17 18:29:20,152 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.openapi.generator.base-package" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+[Hibernate] 
+    drop table if exists Product cascade
+2026-09-17 18:29:25,269 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2026-09-17 18:29:25,271 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "product" does not exist, skipping
+[Hibernate] 
+    drop table if exists Store cascade
+2026-09-17 18:29:25,279 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2026-09-17 18:29:25,280 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "store" does not exist, skipping
+[Hibernate] 
+    drop table if exists warehouse cascade
+2026-09-17 18:29:25,285 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2026-09-17 18:29:25,285 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "warehouse" does not exist, skipping
+[Hibernate] 
+    drop sequence if exists Product_SEQ
+2026-09-17 18:29:25,291 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2026-09-17 18:29:25,292 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "product_seq" does not exist, skipping
+[Hibernate] 
+    drop sequence if exists Store_SEQ
+2026-09-17 18:29:25,295 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2026-09-17 18:29:25,295 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "store_seq" does not exist, skipping
+[Hibernate] 
+    drop sequence if exists warehouse_SEQ
+2026-09-17 18:29:25,299 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2026-09-17 18:29:25,300 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "warehouse_seq" does not exist, skipping
+[Hibernate] 
+    create sequence Product_SEQ start with 1 increment by 50
+[Hibernate] 
+    create sequence Store_SEQ start with 1 increment by 50
+[Hibernate] 
+    create sequence warehouse_SEQ start with 1 increment by 50
+[Hibernate] 
+    create table Product (
+        price numeric(10,2),
+        stock integer not null,
+        id bigint not null,
+        name varchar(40) unique,
+        description varchar(255),
+        primary key (id)
+    )
+[Hibernate] 
+    create table Store (
+        quantityProductsInStock integer not null,
+        id bigint not null,
+        name varchar(40) unique,
+        primary key (id)
+    )
+[Hibernate] 
+    create table warehouse (
+        capacity integer,
+        stock integer,
+        archivedAt timestamp(6),
+        createdAt timestamp(6),
+        id bigint not null,
+        businessUnitCode varchar(255),
+        location varchar(255),
+        primary key (id)
+    )
+[Hibernate] INSERT INTO store(id, name, quantityProductsInStock) VALUES (1, 'TONSTAD', 10)
+[Hibernate] INSERT INTO store(id, name, quantityProductsInStock) VALUES (2, 'KALLAX', 5)
+[Hibernate] INSERT INTO store(id, name, quantityProductsInStock) VALUES (3, 'BESTÅ', 3)
+[Hibernate] ALTER SEQUENCE store_seq RESTART WITH 4
+[Hibernate] INSERT INTO product(id, name, stock) VALUES (1, 'TONSTAD', 10)
+[Hibernate] INSERT INTO product(id, name, stock) VALUES (2, 'KALLAX', 5)
+[Hibernate] INSERT INTO product(id, name, stock) VALUES (3, 'BESTÅ', 3)
+[Hibernate] ALTER SEQUENCE product_seq RESTART WITH 4
+[Hibernate] INSERT INTO warehouse(id, businessUnitCode, location, capacity, stock, createdAt, archivedAt)  VALUES (1, 'MWH.001', 'ZWOLLE-001', 100, 10, '2024-07-01', null)
+[Hibernate] INSERT INTO warehouse(id, businessUnitCode, location, capacity, stock, createdAt, archivedAt) VALUES (2, 'MWH.012', 'AMSTERDAM-001', 50, 5, '2023-07-01', null)
+[Hibernate] INSERT INTO warehouse(id, businessUnitCode, location, capacity, stock, createdAt, archivedAt) VALUES (3, 'MWH.023', 'TILBURG-001', 30, 27, '2021-02-01', null)
+[Hibernate] ALTER SEQUENCE warehouse_seq RESTART WITH 4
+2026-09-17 18:29:25,991 INFO  [io.quarkus] (main) java-code-assignment 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.13.3) started in 17.256s. Listening on: http://localhost:8081
+2026-09-17 18:29:25,992 INFO  [io.quarkus] (main) Profile test activated. 
+2026-09-17 18:29:25,994 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, rest, rest-jackson, smallrye-context-propagation, vertx]
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.stock 
+    from
+        Product p1_0 
+    order by
+        p1_0.name
+[Hibernate] 
+    delete 
+    from
+        Product 
+    where
+        id=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.name,
+        p1_0.price,
+        p1_0.stock 
+    from
+        Product p1_0 
+    order by
+        p1_0.name
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.77 s -- in com.fulfilment.application.monolith.products.ProductEndpointTest
+2026-09-17 18:29:28,467 INFO  [io.quarkus] (main) java-code-assignment stopped in 0.071s
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  46.414 s
+[INFO] Finished at: 2026-09-17T18:29:28+05:30
+[INFO] ------------------------------------------------------------------------
